@@ -23,7 +23,7 @@ public class ConfigReader {
 
     }
 
-    public static String getUrl() {
+    public String getUrl() {
 
         return url;
     }

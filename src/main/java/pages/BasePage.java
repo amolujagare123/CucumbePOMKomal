@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.Wait;
 
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 import static stepdefinitions.SharedSD.getDriver;
 
@@ -40,6 +42,19 @@ public class BasePage {
 		return element;
 	}
 
+
+	public ArrayList<String> getElementTextList(By locator)
+	{
+		List<WebElement> elements = driver.findElements(locator);
+
+		ArrayList<String> txtList = new ArrayList<>();
+
+		for(int i=0;i<elements.size();i++)
+			txtList.add(elements.get(i).getText());
+
+		return txtList;
+
+	}
 
 	public void clickOn(By locator) {
 		webAction(locator).click();

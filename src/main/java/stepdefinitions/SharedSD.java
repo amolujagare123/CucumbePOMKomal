@@ -11,7 +11,7 @@ import utilities.ConfigReader;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import static utilities.ConfigReader.getUrl;
+
 
 public class SharedSD {
 
@@ -19,6 +19,7 @@ public class SharedSD {
 
     @Before //("@web")
     public static void before() throws IOException {
+        ConfigReader config = new ConfigReader();
 
         WebDriverManager.chromedriver().setup();
 
@@ -28,8 +29,8 @@ public class SharedSD {
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        //driver.get(getUrl());
-        driver.get("https://darksky.net/forecast/40.7127,-74.0059/us12/en");
+        driver.get(config.getUrl());
+
     }
 
     @After//("@web")

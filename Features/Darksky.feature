@@ -10,8 +10,9 @@ Feature: A description
     Then I verify current temp is not greater or less then temps from daily timeline
 
  #2
+  @TimelineHours
   Scenario: Verify timline is displayed in correct format
-    Given I am on Darksky home page
+    Given I am on Darksky Home Page
     Then I verify timeline is displayed with two hours incremented
 
     #3
