@@ -57,6 +57,8 @@ public class BasePage {
 	}
 
 	public void clickOn(By locator) {
+
+
 		webAction(locator).click();
 
 		//SharedSD.getDriver().findElement(locator).click();

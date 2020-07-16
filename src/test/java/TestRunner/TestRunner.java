@@ -9,6 +9,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions
         (features="C:\\Users\\PC\\IdeaProjects\\CucumbePOMKomal\\Features",
           glue= "stepdefinitions",
-           tags="@TimelineHours")
+           tags="@TodayTimeline")
 public class TestRunner {
 }

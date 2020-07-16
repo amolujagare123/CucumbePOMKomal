@@ -16,6 +16,7 @@ Feature: A description
     Then I verify timeline is displayed with two hours incremented
 
     #3
+  @TodayTimeline
   Scenario: Verify individual day temp timeline
     Given I am on Darksky Home Page
     When I expand todays timeline
