@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import static stepdefinitions.SharedSD.getDriver;
 
 
-public class DarkSkyTimeline {
+public class DarkSkyTimelineSD {
 
     DarkSkyHome darkSkyHome = new DarkSkyHome();
 

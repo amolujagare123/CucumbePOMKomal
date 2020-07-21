@@ -11,6 +11,12 @@ import java.util.concurrent.TimeUnit;
 public class HotelsSearchResult  extends  BasePage{
 
    By starFields = By.xpath("//span[contains(@class,'star-rating-text')]");
+   By dealPrice = By.xpath("//li[@class='hotel deal-of-the-day vip secret-price-badge-available']//ins");
+
+   public String getDealPrice()
+   {
+       return getTextFromElement(dealPrice);
+   }
 
 
 

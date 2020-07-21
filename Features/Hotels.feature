@@ -13,7 +13,7 @@ Feature: Hotels.com web site testing
       | 5 stars |
       | 3 stars |
       | 2 stars |
-
+# check with the 3 stars & 2 stars
 
 #2
   Scenario: List of all of hotel within 10 miles radius of airport or downtown // zip code 08837
@@ -21,9 +21,10 @@ Feature: Hotels.com web site testing
     Then I verify system displays all hotels within 10 miles radius of airport
     And I verify Hilton Hotel is within radius
 #3
+  @TodaysDealPrice
   Scenario: Verify todays deal price value
     Given I am on default locations search result screen
-    Then I verify todays deal is less than $200
+    Then I verify todays deal is less than "6000" rs
 #4
   Scenario Outline: Verify room count dropdown
     Given I am on hotels.com home page

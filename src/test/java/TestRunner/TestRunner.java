@@ -9,6 +9,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions
         (features="C:\\Users\\PC\\IdeaProjects\\CucumbePOMKomal\\Features",
           glue= "stepdefinitions",
-           tags="@starCheck")
+           tags="@TodaysDealPrice")
 public class TestRunner {
 }
