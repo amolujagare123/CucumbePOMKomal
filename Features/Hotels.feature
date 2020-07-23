@@ -16,16 +16,18 @@ Feature: Hotels.com web site testing
 # check with the 3 stars & 2 stars
 
 #2
+  @distance
   Scenario: List of all of hotel within 10 miles radius of airport or downtown // zip code 08837
     Given I am on default locations search result screen
-    Then I verify system displays all hotels within 10 miles radius of airport
-    And I verify Hilton Hotel is within radius
+    Then I verify system displays all hotels within "20" km radius of airport
+    And I verify "JW Marriott Hotel" is within radius
 #3
   @TodaysDealPrice
   Scenario: Verify todays deal price value
     Given I am on default locations search result screen
     Then I verify todays deal is less than "6000" rs
 #4
+  @roomcount
   Scenario Outline: Verify room count dropdown
     Given I am on hotels.com home page
     Then I select <select_rooms> from room dropdown
@@ -34,10 +36,3 @@ Feature: Hotels.com web site testing
     |select_rooms | number_of_room_dropdown |
     |1            | 1                       |
     |2            | 2                       |
-    |3            | 3                       |
-    |4            | 4                       |
-    |5            | 5                       |
-    |6            | 6                       |
-    |7            | 7                       |
-    |8            | 8                       |
-    |9+           | 0                       |
